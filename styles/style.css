@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+main {
+  display: flex;
+  gap: 19.3rem;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: auto;
+  width: 82.1rem;
+  height: 33.6rem;
+  /* border: 3px solid red; */
+}
+
+.timer {
+  text-align: center;
+  width: 32.1rem;
+  height: 21.3rem;
+  /* border: 1px solid black; */
+}
+
+.timer span {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12.1rem;
+  line-height: 14.8rem;
+
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #323238;
+}
+
+.timer .controls {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  text-align: center;
+}
+
+.timer .controls button img {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.timer .controls button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.sounds {
+  display: grid;
+  grid-template-areas: 
+  "A B"
+  "C D";
+  place-content: center;
+  gap: 3.2rem;
+
+  width: 30.8rem;
+  height: 33.6rem;
+  /* border: 1px solid black; */
+}
+
+.sounds .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 13.8rem;
+  height: 15.2rem;
+  background-color: #E1E1E6;
+  border-radius: 2.4rem;
+
+  cursor: pointer;
+}
+
+.sounds .card img {
+  width: 5.6rem;
+  height: 5.6rem;
+}
+
+.sounds #card-2 {
+  background: #02799D
+}
