@@ -99,7 +99,7 @@ main {
 
   width: 13.8rem;
   height: 15.2rem;
-  background-color: #E1E1E6;
+  background-color: rgb(225, 225, 230);
   border-radius: 2.4rem;
 
   cursor: pointer;
@@ -112,9 +112,9 @@ main {
 }
 
 .sounds .card:hover {
-  background: #bbbbc0;
+  background: rgb(187, 187, 192);
 }
 
 .sounds .card:active {
-  background: #02799D;
+  background: rgb(2, 121, 157);
 }
