@@ -6,6 +6,11 @@ export default function () {
   const coffeeSound = new Audio("./sounds/Coffee.wav")
   const firePlaceSound = new Audio("./sounds/Fireplace.wav")
 
+  forestSound.loop = true
+  rainSound.loop = true
+  coffeeSound.loop = true
+  firePlaceSound.loop = true
+
   function stopAllSounds() {
     forestSound.pause()
     rainSound.pause()
