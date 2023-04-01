@@ -63,16 +63,27 @@ main {
 }
 
 .timer .controls button {
+  border-radius: 1rem;
+  padding: 0.4rem;
   cursor: pointer;
   border: none;
   background: transparent;
+  transition: all .5s ease;
+}
+
+.timer .controls button:hover {
+  background: #E1E1E6
+}
+
+.timer .controls button:active {
+  background: #02799D
 }
 
 .sounds {
   display: grid;
-  grid-template-areas: 
-  "A B"
-  "C D";
+  grid-template-areas:
+    "A B"
+    "C D";
   place-content: center;
   gap: 3.2rem;
 
@@ -92,6 +103,7 @@ main {
   border-radius: 2.4rem;
 
   cursor: pointer;
+  transition: all .4s ease;
 }
 
 .sounds .card img {
@@ -99,6 +111,10 @@ main {
   height: 5.6rem;
 }
 
-.sounds #card-2 {
-  background: #02799D
+.sounds .card:hover {
+  background: #bbbbc0;
+}
+
+.sounds .card:active {
+  background: #02799D;
 }
