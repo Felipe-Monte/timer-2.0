@@ -30,12 +30,12 @@ function countdown() {
     if (seconds <= 0) {
       seconds = 60
 
-      minutesDisplay.textContent = minutes - 1
+      minutesDisplay.textContent = String(minutes - 1).padStart(2, "0")
     }
 
-    secondsDisplay.textContent = seconds - 1
+    secondsDisplay.textContent = String(seconds - 1).padStart(2, "0") 
     countdown()
-  }, 100)
+  }, 10)
 }
 
 function checkColorIsBlue(item) {
