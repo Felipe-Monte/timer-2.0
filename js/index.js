@@ -3,6 +3,8 @@ import sounds from "./sounds.js"
 
 const buttonPlay = document.querySelector('#play')
 const buttonStop = document.querySelector('#stop')
+const buttonVolumeUp = document.querySelector('#volume-up')
+const buttonVolumeDown = document.querySelector('#volume-low')
 
 const boxSoundForest = document.querySelector('#card-forest')
 const boxSoundRain = document.querySelector('#card-rain')
