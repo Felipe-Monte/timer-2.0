@@ -8,9 +8,17 @@
 
 :root {
   font-size: 62.5%;
+  --body-color: #fff;
+  --span-color: #323238;
+  --box-sound-color: rgb(225, 225, 230);
+
+  --hover-color: #E1E1E6;
+  --hover-color-box: #c4c4c7;
+  --active-color: #02799D;
 }
 
 body {
+  background-color: var(--body-color);
   font-size: 1.6rem;
   height: 100vh;
   display: grid;
@@ -26,14 +34,12 @@ main {
   margin: auto;
   width: 82.1rem;
   height: 33.6rem;
-  /* border: 3px solid red; */
 }
 
 .timer {
   text-align: center;
   width: 32.1rem;
   height: 21.3rem;
-  /* border: 1px solid black; */
 }
 
 .timer span {
@@ -47,7 +53,7 @@ main {
   text-align: center;
   text-transform: uppercase;
 
-  color: #323238;
+  color: var(--span-color);
 }
 
 .timer .controls {
@@ -55,11 +61,6 @@ main {
   justify-content: center;
   gap: 4rem;
   text-align: center;
-}
-
-.timer .controls button img {
-  width: 4.8rem;
-  height: 4.8rem;
 }
 
 .timer .controls button {
@@ -72,11 +73,11 @@ main {
 }
 
 .timer .controls button:hover {
-  background: #E1E1E6
+  background: var(--hover-color)
 }
 
 .timer .controls button:active {
-  background: #02799D
+  background: var(--active-color)
 }
 
 .sounds {
@@ -89,7 +90,6 @@ main {
 
   width: 30.8rem;
   height: 33.6rem;
-  /* border: 1px solid black; */
 }
 
 .sounds .card {
@@ -99,7 +99,7 @@ main {
 
   width: 13.8rem;
   height: 15.2rem;
-  background-color: rgb(225, 225, 230);
+  background-color: var(--box-sound-color);
   border-radius: 2.4rem;
 
   cursor: pointer;
@@ -112,9 +112,35 @@ main {
 }
 
 .sounds .card:hover {
-  background: rgb(187, 187, 192);
+  background: var(--hover-color-box);
 }
 
 .sounds .card:active {
-  background: rgb(2, 121, 157);
+  background: var(--active-color);
+}
+
+.icon-sun-moon {
+  position: absolute;
+  top: 6.4rem;
+  right: 6.4rem;
+
+  width: fit-content;
+}
+
+.hide {
+  display: none;
+}
+
+svg path {
+  fill: var(--span-color);
+}
+
+.dark-mode{
+  --body-color: #000;
+  --span-color: #fff;
+  --box-sound-color: rgb(41, 41, 46);
+
+  --hover-color: #E1E1E6;
+  --hover-color-box: #c4c4c7;
+  --active-color: #02799D;
 }

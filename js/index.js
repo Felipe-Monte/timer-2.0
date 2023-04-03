@@ -11,12 +11,23 @@ const boxSoundRain = document.querySelector('#card-rain')
 const boxSoundMarket = document.querySelector('#card-market')
 const boxSoundFire = document.querySelector('#card-fire')
 
+const sunIcon = document.querySelector('.sun_icon')
+const moonIcon = document.querySelector('.moon_icon')
+
 let minutesDisplay = document.querySelector('#minutes')
 let secondsDisplay = document.querySelector('#seconds')
 
 let resetTimer
 
 const sound = sounds()
+
+function addDarkMode() {
+  document.body.classList.add('dark-mode')
+}
+
+function removeDarkMode() {
+  document.body.classList.remove('dark-mode')
+}
 
 function countdown() {
   resetTimer = setTimeout(function () {
@@ -33,7 +44,7 @@ function countdown() {
       minutesDisplay.textContent = String(minutes - 1).padStart(2, "0")
     }
 
-    secondsDisplay.textContent = String(seconds - 1).padStart(2, "0") 
+    secondsDisplay.textContent = String(seconds - 1).padStart(2, "0")
     countdown()
   }, 10)
 }
@@ -59,11 +70,11 @@ buttonStop.addEventListener('click', function () {
   secondsDisplay.textContent = "00"
 })
 
-buttonVolumeUp.addEventListener('click', function(){
- sound.volumeUp()
+buttonVolumeUp.addEventListener('click', function () {
+  sound.volumeUp()
 })
 
-buttonVolumeDown.addEventListener('click', function(){
+buttonVolumeDown.addEventListener('click', function () {
   sound.volumeDown()
 })
 
@@ -106,3 +117,17 @@ boxSoundFire.addEventListener('click', function () {
     sound.firePlaceSound.play()
   }
 })
+
+sunIcon.addEventListener('click', function () {
+  addDarkMode()
+  sunIcon.classList.add('hide')
+  moonIcon.classList.remove('hide')
+})
+
+moonIcon.addEventListener('click', function () {
+  removeDarkMode()
+  moonIcon.classList.add('hide')
+  sunIcon.classList.remove('hide')
+})
+
+
