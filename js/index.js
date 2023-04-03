@@ -59,6 +59,14 @@ buttonStop.addEventListener('click', function () {
   secondsDisplay.textContent = "00"
 })
 
+buttonVolumeUp.addEventListener('click', function(){
+ sound.volumeUp()
+})
+
+buttonVolumeDown.addEventListener('click', function(){
+  sound.volumeDown()
+})
+
 boxSoundForest.addEventListener('click', function () {
   let result = checkColorIsBlue(boxSoundForest)
   if (result == "rgb(225, 225, 230)") {

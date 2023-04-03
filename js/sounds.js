@@ -18,11 +18,27 @@ export default function () {
     firePlaceSound.pause()
   }
 
+  function volumeUp() {
+    forestSound.volume += 0.1
+    rainSound.volume += 0.1
+    coffeeSound.volume += 0.1
+    firePlaceSound.volume += 0.1
+  }
+
+  function volumeDown() {
+    forestSound.volume -= 0.1
+    rainSound.volume -= 0.1
+    coffeeSound.volume -= 0.1
+    firePlaceSound.volume -= 0.1
+  }
+
   return {
     forestSound,
     rainSound,
     coffeeSound,
     firePlaceSound,
-    stopAllSounds
+    stopAllSounds,
+    volumeUp,
+    volumeDown,
   }
 }
