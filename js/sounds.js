@@ -1,4 +1,3 @@
-
 export default function () {
 
   const forestSound = new Audio("./sounds/Forest.wav")

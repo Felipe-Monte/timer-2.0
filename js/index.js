@@ -1,4 +1,3 @@
-
 import sounds from "./sounds.js"
 
 const buttonPlay = document.querySelector('#play')
@@ -14,6 +13,8 @@ const boxSoundFire = document.querySelector('#card-fire')
 const sunIcon = document.querySelector('.sun_icon')
 const moonIcon = document.querySelector('.moon_icon')
 
+const allCards = document.querySelectorAll('.card')
+
 let minutesDisplay = document.querySelector('#minutes')
 let secondsDisplay = document.querySelector('#seconds')
 
@@ -22,10 +23,16 @@ let resetTimer
 const sound = sounds()
 
 function addDarkMode() {
+  for(let i = 0; i < allCards.length; i++) {
+    allCards[i].style.border = "rgb(41, 41, 46)"
+  }
   document.body.classList.add('dark-mode')
 }
 
 function removeDarkMode() {
+  for(let i = 0; i < allCards.length; i++) {
+    allCards[i].style.border = "2px solid rgb(225, 225, 230)"
+  }
   document.body.classList.remove('dark-mode')
 }
 
@@ -50,12 +57,12 @@ function countdown() {
 }
 
 function checkColorIsBlue(item) {
-  if (item.style.backgroundColor == "rgb(2, 121, 157)" /*blue*/) {
-    item.style.backgroundColor = 'rgb(225, 225, 230' /*gray*/
+  if (item.style.border == "2px solid rgb(2, 121, 157)" /*blue*/) {
+    item.style.border = '2px solid rgb(225, 225, 230' /*gray*/
   } else {
-    item.style.backgroundColor = "rgb(2, 121, 157)"
+    item.style.border = "2px solid rgb(2, 121, 157)"
   }
-  return item.style.backgroundColor
+  return item.style.border
 }
 
 buttonPlay.addEventListener('click', function () {
@@ -80,7 +87,7 @@ buttonVolumeDown.addEventListener('click', function () {
 
 boxSoundForest.addEventListener('click', function () {
   let result = checkColorIsBlue(boxSoundForest)
-  if (result == "rgb(225, 225, 230)") {
+  if (result == "2px solid rgb(225, 225, 230)") {
     sound.stopAllSounds()
   } else {
     sound.stopAllSounds()
@@ -90,7 +97,7 @@ boxSoundForest.addEventListener('click', function () {
 
 boxSoundRain.addEventListener('click', function () {
   let result = checkColorIsBlue(boxSoundRain)
-  if (result == "rgb(225, 225, 230)") {
+  if (result == "2px solid rgb(225, 225, 230)") {
     sound.stopAllSounds()
   } else {
     sound.stopAllSounds()
@@ -100,7 +107,7 @@ boxSoundRain.addEventListener('click', function () {
 
 boxSoundMarket.addEventListener('click', function () {
   let result = checkColorIsBlue(boxSoundMarket)
-  if (result == "rgb(225, 225, 230)") {
+  if (result == "2px solid rgb(225, 225, 230)") {
     sound.stopAllSounds()
   } else {
     sound.stopAllSounds()
@@ -110,7 +117,7 @@ boxSoundMarket.addEventListener('click', function () {
 
 boxSoundFire.addEventListener('click', function () {
   let result = checkColorIsBlue(boxSoundFire)
-  if (result == "rgb(225, 225, 230)") {
+  if (result == "2px solid rgb(225, 225, 230)") {
     sound.stopAllSounds()
   } else {
     sound.stopAllSounds()
